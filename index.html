@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Marihat - Piano & Violin Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2c2c2c; /* Dark piano key tone */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, top 0.3s ease;
+        }
+
+        .nav-links a {
+            color: #e0dede; /* Light ivory */
+            transition: color 0.3s ease;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #2c2c2c;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: #e0dede;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+        /* Main Section Styles */
+        .typewrite > .wrap {
+            border-right: 0.08em solid #e0ffff;
+            color: #e0FFFF;
+        }
+
+        body {
+            background-color: #1f1f1f; /* Dark background to contrast with lighter elements */
+            color: #e0dede; /* Light ivory text */
+        }
+
+        h1 span {
+            color: #e0dede;
+        }
+
+        .btn-primary {
+            background-color: #c49c48; /* Violin wood tone */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #ad8335; /* Darker violin tone */
+        }
+
+        /* Section Styling */
+        #about, #projects, #skills, #contact {
+            background-color: #2c2c2c; /* Slightly lighter tone */
+        }
+
+        .section-title {
+            color: #c49c48; /* Violin tone */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c2c2c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar flex justify-between items-center p-5 shadow-lg" id="navbar">
+        <div class="logo" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+            <a href="#" class="text-2xl font-bold transition duration-300"><span>Daniel</span> Marihat</a>
+        </div>
+        <ul class="nav-links flex space-x-5" data-aos="fade-down">
+            <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="900">
+                <a href="#about" class="px-3 py-2 hover:text-gray-300 transition duration-300">About</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">
+                <a href="#courses" class="px-3 py-2 hover:text-gray-300 transition duration-300">Courses</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="900" data-aos-duration="1500">
+                <a href="#skills" class="px-3 py-2 hover:text-gray-300 transition duration-300">Skills</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1800">
+                <a href="#contact" class="px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
+            </li>
+        </ul>
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex flex-col items-center justify-center min-h-screen text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Hi, I'm <span>Daniel Marihat</span><br>Piano & Violin Instructor
+        </h1>
+        <h2 data-aos="fade-in" data-aos-delay="500" data-aos-duration="1200">
+            <a href="#" class="typewrite" data-period="1000" data-type='[
+                "Creating a harmonious blend of piano and violin education.",
+                "Inspiring musical passion through expert teaching.",
+                "Crafting musical journeys with dedication and skill."
+                ]'><span class="wrap"></span></a>
+        </h2>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <h1 class="section-title text-4xl font-bold mb-10 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">About Me</h1>
+        <div class="about-wrap flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+            <div class="about-img p-8 mb-52">
+                <img src="profil.png" alt="Daniel Marihat" class="rounded-full w-52 h-52">
+            </div>
+            <div class="about-desc text-center md:text-left">
+                <p class="mb-4">
+                    I am Daniel Marihat, a passionate and experienced music instructor specializing in piano and violin.
+                    With a Bachelor’s degree from Singapore and 18 years of teaching experience, I am dedicated to sharing my
+                    knowledge and nurturing the musical talents of students in Jakarta, Indonesia.
+                </p>
+                <p class="mb-4">
+                    My teaching philosophy revolves around making music education accessible, enjoyable, and deeply
+                    engaging. Whether you're a beginner or an advanced learner, I am here to guide you on your musical journey.
+                </p>
+                <p class="mb-4">
+                    Join me to explore the beauty of piano and violin, and discover the joy of creating music.
+                </p>
+                <a href="#"><button class="btn-primary mt-4 px-4 py-2 rounded-full">Download CV</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-5 section-title">Courses Offered</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Piano Mastery</h3>
+                    <p>Explore the world of piano with structured lessons tailored to your skill level.</p>
+                </div>
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Violin Virtuoso</h3>
+                    <p>Master the violin with expert guidance, whether you're a beginner or an advanced player.</p>
+                </div>
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Combined Piano & Violin</h3>
+                    <p>Experience the harmony of learning both instruments together in a comprehensive course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-5 section-title">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Piano Performance</h3>
+                    <p>Expert in classical and contemporary piano performance.</p>
+                </div>
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Violin Techniques</h3>
+                    <p>Advanced knowledge of violin techniques and repertoire.</p>
+                </div>
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Music Theory</h3>
+                    <p>Comprehensive understanding of music theory and its practical application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-5 section-title">Get in Touch</h2>
+            <p>If you're interested in learning more or would like to enroll in a course, please feel free to contact me!</p>
+            <div class="mt-10">
+                <form action="#">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <input type="text" placeholder="Your Name" class="p-3 rounded-md">
+                        <input type="email" placeholder="Your Email" class="p-3 rounded-md">
+                    </div>
+                    <textarea placeholder="Your Message" class="p-3 mt-5 rounded-md w-full h-32"></textarea>
+                    <button type="submit" class="btn-primary mt-5 px-4 py-2 rounded-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center">
+        <p>&copy; 2024 Daniel Marihat. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+
+        document.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.top = '0';
+            } else {
+                navbar.style.top = '-80px';
+            }
+        });
+    </script>
+</body>
+
+</html>

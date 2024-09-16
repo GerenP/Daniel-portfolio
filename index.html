@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Marihat - Piano & Violin Courses</title>
+    <!-- CDN for AOS and Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -76,6 +77,8 @@
         body {
             background-color: #1f1f1f; /* Dark background to contrast with lighter elements */
             color: #e0dede; /* Light ivory text */
+            font-family: 'Arial', sans-serif;
+            padding-top: 80px; /* Prevents content from hiding behind the fixed navbar */
         }
 
         h1 span {
@@ -93,8 +96,12 @@
         }
 
         /* Section Styling */
-        #about, #projects, #skills, #contact {
+        #about,
+        #courses,
+        #skills,
+        #contact {
             background-color: #2c2c2c; /* Slightly lighter tone */
+            padding: 40px 0;
         }
 
         .section-title {
@@ -104,6 +111,7 @@
         /* Footer Styles */
         footer {
             background-color: #2c2c2c;
+            color: #e0dede;
         }
     </style>
 </head>
@@ -114,20 +122,14 @@
         <div class="logo" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
             <a href="#" class="text-2xl font-bold transition duration-300"><span>Daniel</span> Marihat</a>
         </div>
-        <ul class="nav-links flex space-x-5" data-aos="fade-down">
-            <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="900">
-                <a href="#about" class="px-3 py-2 hover:text-gray-300 transition duration-300">About</a>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">
-                <a href="#courses" class="px-3 py-2 hover:text-gray-300 transition duration-300">Courses</a>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="900" data-aos-duration="1500">
-                <a href="#skills" class="px-3 py-2 hover:text-gray-300 transition duration-300">Skills</a>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1800">
-                <a href="#contact" class="px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
-            </li>
-        </ul>
+        <nav>
+            <ul class="nav-links flex space-x-5" data-aos="fade-down">
+                <li><a href="#about" class="px-3 py-2 hover:text-gray-300 transition duration-300">About</a></li>
+                <li><a href="#courses" class="px-3 py-2 hover:text-gray-300 transition duration-300">Courses</a></li>
+                <li><a href="#skills" class="px-3 py-2 hover:text-gray-300 transition duration-300">Skills</a></li>
+                <li><a href="#contact" class="px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
         <div class="burger" id="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -150,32 +152,25 @@
     </main>
 
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <h1 class="section-title text-4xl font-bold mb-10 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">About Me</h1>
-        <div class="about-wrap flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
-            <div class="about-img p-8 mb-52">
-                <img src="profil.png" alt="Daniel Marihat" class="rounded-full w-52 h-52">
-            </div>
-            <div class="about-desc text-center md:text-left">
-                <p class="mb-4">
-                    I am Daniel Marihat, a passionate and experienced music instructor specializing in piano and violin.
-                    With a Bachelor’s degree from Singapore and 18 years of teaching experience, I am dedicated to sharing my
-                    knowledge and nurturing the musical talents of students in Jakarta, Indonesia.
-                </p>
-                <p class="mb-4">
-                    My teaching philosophy revolves around making music education accessible, enjoyable, and deeply
-                    engaging. Whether you're a beginner or an advanced learner, I am here to guide you on your musical journey.
-                </p>
-                <p class="mb-4">
-                    Join me to explore the beauty of piano and violin, and discover the joy of creating music.
-                </p>
-                <a href="#"><button class="btn-primary mt-4 px-4 py-2 rounded-full">Download CV</button></a>
+    <section id="about">
+        <div class="container mx-auto px-6">
+            <h1 class="section-title text-4xl font-bold mb-10 text-center" data-aos="fade-up">About Me</h1>
+            <div class="about-wrap flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up">
+                <div class="about-img p-8 mb-52">
+                    <img src="profil.png" alt="Daniel Marihat" class="rounded-full w-52 h-52">
+                </div>
+                <div class="about-desc text-center md:text-left">
+                    <p class="mb-4">I am Daniel Marihat, a passionate and experienced music instructor specializing in piano and violin.</p>
+                    <p class="mb-4">My teaching philosophy revolves around making music education accessible, enjoyable, and deeply engaging.</p>
+                    <p class="mb-4">Join me to explore the beauty of piano and violin, and discover the joy of creating music.</p>
+                    <a href="#"><button class="btn-primary mt-4 px-4 py-2 rounded-full">Download CV</button></a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="py-20">
+    <section id="courses">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-5 section-title">Courses Offered</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -196,7 +191,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
+    <section id="skills">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-5 section-title">Skills & Expertise</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -217,17 +212,17 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-5 section-title">Get in Touch</h2>
             <p>If you're interested in learning more or would like to enroll in a course, please feel free to contact me!</p>
             <div class="mt-10">
                 <form action="#">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <input type="text" placeholder="Your Name" class="p-3 rounded-md">
-                        <input type="email" placeholder="Your Email" class="p-3 rounded-md">
+                        <input type="text" placeholder="Your Name" class="p-3 rounded-md" required>
+                        <input type="email" placeholder="Your Email" class="p-3 rounded-md" required>
                     </div>
-                    <textarea placeholder="Your Message" class="p-3 mt-5 rounded-md w-full h-32"></textarea>
+                    <textarea placeholder="Your Message" class="p-3 mt-5 rounded-md w-full h-32" required></textarea>
                     <button type="submit" class="btn-primary mt-5 px-4 py-2 rounded-full">Send Message</button>
                 </form>
             </div>

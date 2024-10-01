@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap V4.6 CSS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <!-- Local CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title>Daniel Marihat - Piano & English Course</title>
+  </head>
+  <body>
+    <!-- Navbar from Bootstrap -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-navbar-color">
+      <a class="navbar-brand" href="index.html"
+        >Daniel Marihat <i class="fas fa-microphone-alt"></i
+      ></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="songs.html">Songs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutme.html">About Me</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="booking.html"
+              >Bookings<span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- Header section -->
+      <header class="hero-section">
+        <h1>Bookings</h1>
+      </header>
+      <hr />
+
+      <!-- Pricing section -->
+      <h2>Pricing</h2>
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <h4>1 Hour Piano Course</h4>
+          <div class="pricing">
+            <i class="fas fa-church pricing-icons"></i>
+            <p class="price">€300</p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h4>1 hour English Course</h4>
+          <div class="pricing">
+            <i class="fas fa-glass-cheers pricing-icons"></i>
+            <p class="price">€400</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h4>Both</h4>
+          <div class="pricing">
+            <i class="fas fa-gift pricing-icons"></i>
+            <p class="price"><span id="old-price">€700</span> €650</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- Book Now Section -->
+      <h2>Book Now</h2>
+
+      <!-- Bootstrap Form -->
+      <form class="container" id="form-container">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname-input">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname-input"
+              name="first-name"
+              placeholder="First name here"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname-input">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastname-input"
+              name="last-name"
+              placeholder="Last name here"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email-input">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email-input"
+              name="email-address"
+              placeholder="joebloggs@---.com"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phone-input">Phone</label>
+            <!-- Pattern attibute from W3 Schools -->
+            <input
+              type="tel"
+              class="form-control"
+              id="phone-input"
+              name="phone-number"
+              placeholder="086-xxxxxxx"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-6">
+            <label for="weddingdate-input">Date of piano lessons</label>
+            <input
+              type="date"
+              class="form-control"
+              id="weddingdate-input"
+              name="wedding-date"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="options-selector">Booking Options</label>
+            <select class="custom-select" id="options-selector" required>
+              <option value="" selected disabled>Choose...</option>
+              <option value="1">Piano</option>
+              <option value="2">English</option>
+              <option value="3">Both</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="aboutyou-input">About You</label>
+          <textarea
+            class="form-control"
+            id="aboutyou-input"
+            rows="3"
+            placeholder="Tell me a little about you and your partner"
+            name="about-you"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="songrequests-input">time requests</label>
+          <textarea
+            class="form-control"
+            id="songrequests-input"
+            rows="3"
+            placeholder="Let me know if you have any specific song requests"
+            name="song-requests"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg"
+          id="book-now-button"
+          value="submit"
+          data-toggle="modal"
+          data-target="#thanks-modal"
+        >
+          Get in Touch!
+        </button>
+      </form>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-6 col-lg-6 justify-content-center">
+            <ul class="contact">
+              <li>
+                <a href="tel:" target="_blank"
+                  ><span class="footer-contact">05552536879</span
+                  ><i class="fas fa-phone-square-alt"></i
+                ></a>
+              </li>
+              <li>
+                <a href="mailto:@gmail.com" target="_blank"
+                  ><span class="footer-contact">@gmail.com</span
+                  ><i class="fas fa-envelope-square"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-12 cold-md-6 col-lg-6 justify-content-center">
+            <ul class="social-media">
+              <li>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com//"
+                  target="_blank"
+                  ><i class="fab fa-instagram-square"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/c/" target="_blank"
+                  ><i class="fab fa-youtube-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in//"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Popper and Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

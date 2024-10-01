@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  font-family: "Cormorant Garamond", san-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 auto;
+  background-image: url("../images/general/augustine-wong-li0iC0rjvvg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #dee7e7;
+  color: #4f646f;
+}
+
+/* -------------------------------------------------------- Navbar */
+
+.bg-navbar-color {
+  background-color: #4f646f;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #f4faff;
+}
+
+.navbar-light .navbar-brand {
+  color: #f4faff;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #dee7e7;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: #f4faff;
+  color: #535657;
+  border-color: #535657;
+}
+
+/* -------------------------------------------------------- Headers */
+
+h1 {
+  color: #535657;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 501px) {
+  h1,
+  h2 {
+    font-size: 185%;
+  }
+}
+
+h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/* code below from Youtube - https://www.youtube.com/watch?v=qZno3Yk8QKc */
+
+h2::after {
+  content: "";
+  background: #4f646f;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 20px auto 20px;
+}
+
+/* -------------------------------------------------------- Buttons */
+
+.btn-primary {
+  color: #f4faff;
+  background-color: #4f646f;
+  border: #f4faff;
+}
+
+.btn-primary:hover {
+  background-color: #f4faff;
+  color: #4f646f;
+  border: 1px solid #4f646f;
+}
+
+#book-now-button {
+  background-color: #f4faff;
+  color: #4f646f;
+  border: 1px solid #4f646f;
+  margin-bottom: 5px;
+}
+
+/* -------------------------------------------------------- Hero section */
+
+.hero-section {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.hero {
+  background-image: url("../images/general/.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  border: 1px solid #4f646f;
+  background-color: #f4faff;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 400px;
+  border-radius: 25px;
+}
+
+/* -------------------------------------------------------- Live Studio Covers section */
+
+/* code from youtube embedding */
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 4px;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+/* ---- end */
+
+.iframe-container:hover {
+  border: 1px solid #f4faff;
+  border-radius: 25px;
+}
+
+/* --------------------------------------------------------Testimonials section */
+
+.profile {
+  background-color: #4f646f;
+  color: #f4faff;
+  border-radius: 25px;
+  padding-top: 4px;
+  margin-top: 15px;
+  min-height: 450px;
+}
+
+.profile:hover {
+  background-color: #f4faff;
+  color: #535657;
+  border: 1px solid #4f646f;
+}
+
+.profile img {
+  width: 175px;
+  height: 175px;
+  border: 1px solid #f4faff;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.profile blockquote {
+  font-size: 1.2rem;
+  padding-left: 4px;
+  margin-top: 30px;
+}
+
+blockquote i {
+  padding: 4px;
+}
+
+@media (max-width: 320px) {
+  .profile {
+    min-height: 500px;
+  }
+}
+
+/* --------------------------------------------------------Songs section */
+
+.audio-controls {
+  height: 30px;
+}
+
+.audio-controls:hover {
+  border: 1px solid #4f646f;
+  border-radius: 25px;
+  transition-duration: 0.1s;
+}
+
+.songs-container {
+  padding-left: 0;
+}
+
+.songs {
+  margin-top: 15px;
+  text-align: center;
+  list-style: none;
+}
+
+.songs span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------Bookings section */
+
+.pricing-icons {
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 200%;
+  font-weight: 800;
+}
+
+#old-price {
+  text-decoration: line-through;
+}
+
+#form-container {
+  background-color: #4f646f;
+  color: #f4faff;
+  border-radius: 25px;
+  padding-top: 4px;
+  margin-top: 15px;
+  min-height: 450px;
+}
+
+/* --------------------------------------------------------About Me section */
+
+.text-card {
+  background-color: #4f646f;
+  color: #f4faff;
+  border-radius: 25px;
+  padding-top: 4px;
+  margin-top: 15px;
+}
+
+ul.experience-item {
+  padding-left: 0;
+}
+
+.experience-item li {
+  list-style: none;
+}
+
+.cv-item {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------Footer section */
+
+footer {
+  background-color: #4f646f;
+  margin-top: 20px;
+}
+
+.contact,
+.social-media {
+  list-style: none;
+  font-size: 200%;
+  margin: 5px;
+  padding-left: 0;
+}
+
+.contact li,
+.social-media li {
+  display: inline-block;
+  padding: 5px;
+  margin: 4px;
+}
+
+.contact li a,
+.social-media li a {
+  color: #f4faff;
+}
+
+.footer-contact {
+  font-size: 60%;
+  vertical-align: top;
+  padding-right: 4px;
+}
+
+@media (min-width: 991px) {
+  .social-media {
+    padding-top: 33px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .social-media {
+    padding-top: 0;
+  }
+}
